@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+</head>
+<body>
+    <head>
+
+    </head>
+    <main>
+        <a href="index.html">INCIO</a>
+    <a href="Pastelero.html">Vista pastelero</a>
+        <h1>A continucacion describenos tu pedido</h1>
+        <form action="./js/main.js">
+            <label class="form" for="nombre">Cual es tu nombre?</label> <br>
+            <input type="text" name="Nombre" id="nombre" placeholder="nombre">  <br>
+
+            <p class="direccion">Direccion:</p>
+            <label class="form" for="Calle">Calle:</label> <br>
+            <input type="text" name="Calle" id="Calle">  <br>
+            <label class="form" for="Colonia">Colonia:</label> <br>
+            <input type="text" name="Colonia" id="Colonia">  <br>
+            <label class="form" for="ncasa">Numero de casa:</label> <br>
+            <input type="text" name="ncasa" id="ncasa">  <br>
+            <label class="form" for="Municipio">Municipio:</label> <br>
+            <input type="text" name="Municipio" id="Municipio">  <br>
+            <label class="form" for="Estado">Estado:</label> <br>
+            <input type="text" name="Estado" id="Estado">  <br>
+            <label class="form" for="cp">Codigo postal:</label> <br>
+            <input type="text" name="cp" id="cp">  <br>
+
+            <label class="form" for="telefono">Cual es tu numero de telefono?</label><br>
+            <input type="tel" name="telefono" id="telefono" maxlength="10" placeholder="--- --- -----"> <br>
+
+            <label class="form" for="correo">Cual es tu correo electronico?</label> <br>
+            <input type="email" name="correo" id="correo" placeholder="example@example.com"><br>
+
+            <p>Descripcion del pedido</p>
+         <p class="sabores">Escoge tus sabores</p>
+            <input type="checkbox" name="Relleno" id="Relleno" value="Relleno" class="sabor">
+            <label for="Relleno">Relleno</label>
+            <input type="checkbox" name="Fondant" id="Fondant" value="Fondant" class="sabor" >
+            <label for="Fondant">Fondant</label>
+            <input type="checkbox" name="chantilly" id="chantilly" value="chantilly" class="sabor">
+            <label for="chantilly">Chantilly</label>
+            <input type="checkbox" name="Merengue" id="Merengue" value="Merengue" class="sabor">
+            <label for="Merengue">Merengue</label>
+            <input type="checkbox" name="Vainilla" id="Vainilla" value="Vainilla" class="sabor">
+            <label for="Vainilla">Vainilla</label>
+            <input type="checkbox" name="Chocolate" id="Chocolate" value="Chocolate" class="sabor">
+            <label for="Chocolate">Chocolate</label>
+            <input type="checkbox" name="Fresa" id="Fresa" value="Fresa" class="sabor">
+            <label for="Fresa">Fresa</label>
+            <input type="checkbox" name="Limón" id="Limón" value="Limón" class="sabor">
+            <label for="Limón">Limon</label>
+            <input type="checkbox" name="Mermelada" id="Mermelada" value="Mermelada" class="sabor">
+            <label for="Mermelada">Mermelada</label> <br>
+            
+            <p class="">Escoge tus adornos</p>
+            <input type="checkbox" name="Flores" id="Flores" value="Flores" class="adorno">
+            <label for="Flores">Flores</label>
+            <input type="checkbox" name="Cartel" id="Cartel" value="Cartel" class="adorno">
+            <label for="Cartel">Cartel</label>
+            <input type="checkbox" name="Letras" id="Letras" value="Letras" class="adorno">
+            <label for="Letras">Letras o frases</label>
+            <input type="checkbox" name="Frutas" id="Frutas" value="Frutas" class="adorno">
+            <label for="Frutas">Frutas</label>
+            <input type="checkbox" name="Dulces" id="Dulces" value="Dulces" class="adorno"> 
+            <label for="Dulces">Dulces</label>
+            <input type="checkbox" name="Galletas" id="Galletas" value="Galletas" class="adorno">
+            <label for="Galletas">Galletas</label>
+            <input type="checkbox" name="Juguetes" id="Juguetes" value="Juguetes" class="adorno">
+            <label for="Juguetes">Juguetes</label>
+            <input type="checkbox" name="figuras" id="figuras" value="figuras" class="adorno">
+            <label for="figuras">Figuras con Fondant</label>
+            <input type="checkbox" name="Velas" id="Velas" value="Velas" class="adorno">
+            <label for="Velas">Velas</label>
+        
+
+            <p>Si tienes alguna descripcion en especifica para el diseño de tus pastel, 
+                por favor especificalo a continuacion</p>
+            <textarea name="descripcion" id="" cols="90" rows="10"></textarea>
+                
+        <br><br><br>
+         <input type="reset" >
+         <input type="submit">
+        </form>
+        <button type="button"  id="boton">Mostrar valores seleccionados</button>
+        <h2>Valores seleccionados</h2>
+        <ul id="lista" class="list-group"></ul>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        var boton = document.getElementById('boton');
+        var lista = document.getElementById('lista');
+        var checks = document.querySelectorAll('.sabor');
+
+
+        boton.addEventListener('click',function()
+        {
+            checks.forEach((e)=> {
+                if(e.checked==true)
+                {
+                    console.log(e.value);
+                }
+               
+            });
+        });
+    </script>
+</body>
+</html>
