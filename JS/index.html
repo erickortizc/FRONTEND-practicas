@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pokedex</title>
+   
+</head>
+<body class="container " >
+    <h1>Pokedex Launch X</h1>
+    <input class="mt-2" type="text" placeholder="Nombre del pokemon." id="pokeName" name="pokeName"><br>
+    <button class="mt-2 mb-2 btn btn-danger" onclick="fetchPokemon()">Cambiar Pokemon</button>
+    <main class="pokedex ">
+        <section class="part1 d-flex align-items-center justify-content-center flex-column">
+            <div class="elements  ps-5 pt-2">
+                <div class="circle rounded-circle d-flex align-items-center justify-content-center" >
+                    <div class=" rounded-circle"> </div>
+                </div>
+
+                
+            </div>
+            <div class="pantalla d-flex align-items-center justify-content-center rounded-2 mt-3">
+                <div class="glass rounded">
+                    <div class="datapres d-flex flex-column ps-2 pt-2 fs-5">
+                        <div>
+                            <label for="" class="fw-bolder">Nombre: </label>
+                            <label for=""id="pokenames"></label> 
+                        </div>
+                        <div>
+                            <label for="" class="fw-bolder">Tipo: </label>
+                            <label for="" id="pokeTypeid"></label>
+                        </div>
+                    </div>
+                   <div class="pokemonimg d-flex justify-content-center">
+                    <img src="pokebola.png" alt="Pokemon" width="150px" id="pokeImg">
+                   </div>
+                </div>
+            </div>
+        </section>
+        <section class="part2 d-flex align-items-center justify-content-center ">
+            <div class="pantalla d-flex align-items-center justify-content-center rounded-2 ">
+                <div class="glass2 d-flex flex-row">
+                    <div class="Estadisticas pe-2">
+                        <table class="text-white">
+                            <tr class="stat ">
+                                <th>Estadistica</th>
+                                <th> Puntos</th>
+                            </tr>
+                            <tr class="point">
+                                <th>Hp:</th>
+                                <th class="text-center"><label for="" id="pokemonhp"></label></th>
+                            </tr>
+                            <tr class="points">
+                                <th>Ataque:</th>
+                                <th class="text-center"><label for="" id="pokemonAttach"></label></th>
+                            </tr>
+                            <tr class="points">
+                                <th>Defensa:</th>
+                                <th class="text-center"><label for="" id="pokemondefense"></label></th>
+                            </tr>
+                            <tr class="points">
+                                <th>Ataque especial:</th>
+                                <th class="text-center"><label for="" id="pokemonspatt"></label></th>
+                            </tr>
+                            <tr class="points">
+                                <th>Defense especial:</th>
+                                <th class="text-center"><label for="" id="pokemonspdef"></label></th>
+                            </tr>
+                            <tr class="points">
+                                <th>Velocidad</th>
+                                <th class="text-center"><label for="" id="pokemonspeed"></label></th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="mov-esp ms-2">
+                        <table class="text-white">
+                            <tr class="stat ">
+                                <th>Movimientos especiales</th>
+                            
+                            </tr>
+                            <tr class="point">
+                           
+                                <th><label for="" id="move1"></label> <br>
+                                    <label for="" id="move2"></label> <br>
+                                    <label for="" id="move3"></label> <br>
+                                    <label for="" id="move4"></label> <br>
+                                    <label for="" id="move5"></label> <br></th>
+                            </tr>
+                        </table>
+                    </div>
+            </div>
+        </section>
+        <section class="parte3 container-fluid mt-2 ps-5 pt-2">
+            <div class="element  d-flex flex-row">
+                <div class="circulo rounded-circle"></div>
+                <div class="subelemnt d-flex align-items-center">
+                    <div class="mid-circulo rounded-pill m-2"> </div>
+                    <div class="mid-circulo rounded-pill m-2"> </div>
+                </div>
+            
+            </div>
+           <div class="directional-pad d-flex justify-content-around">
+                <div class="cuadro rounded mt-2">
+
+                </div>  
+                <img class="mb-4" src="directional-pad.png" alt="">
+            </div>
+           
+        </section>
+        <section class="part4">
+            <div class="elemtns d-flex align-items-center justify-content-center rounded-2 mt-1">
+                <div class="buttoms d-flex flex-column">
+                    <div class="bp1 d-flex flex-row">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="bp1 d-flex flex-row">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    
+                    
+                </div>
+                    
+            </div>
+            <div class="elements2">
+                <div class="leds d-flex justify-content-end pe-5">
+                    <div class="mid-circulo rounded-pill m-2"> </div>
+                    <div class="mid-circulo rounded-pill m-2"> </div>
+                </div>
+                <div class="buttoms ps-5 d-flex justify-content-start">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+   <br>
+   <br>
+    
+</body>
+<footer class="fixed-bottom d-flex justify-content-center py-2 footer-custom mt-6">
+        <span class="fs-4 "> Todos los derechos resevervados | <b class="text-uppercase">Erick Ortiz </b>  </span>
+    <script src="pokedexlaunchx.js"></script>
+</footer>
+</html>
